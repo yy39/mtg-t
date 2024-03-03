@@ -1,17 +1,21 @@
 import pyautogui
 
-test = pyautogui.prompt(text='Number of nonToken Nazgul', title='Test' , default='')
 numOf = {
   'nonToken': 0,
-  'Token': 0,
+  'token': 0,
   'tokenDoubler': 0,
   'counterDoubler': 0
 }
 
-def validateInput(input):
+def validateInput(string: input):
     try:
         print(input)
     except:
         print(input)
 
-print(test)
+numOf['nonToken'] = pyautogui.prompt(text='Enter number of non-token Nazguls entering', title='Enter numbers 1/4', default='')
+numOf['token'] = pyautogui.prompt(text='Enter number of token Nazguls entering', title='Enter numbers 2/4', default='')
+numOf['tokenDoubler'] = pyautogui.prompt(text='Enter number of token doublers', title='Enter numbers 3/4', default='')
+numOf['counterDoubler'] = pyautogui.prompt(text='Enter number of counter doublers', title='Enter numbers 4/4', default='')
+
+print(numOf)
